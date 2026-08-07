@@ -10,7 +10,7 @@ export function About() {
         <RevealImage
           src={aboutImg}
           alt="Warm minimal interior with travertine wall, oak slats and linen seating"
-          className="aspect-[4/5] lg:sticky lg:top-28"
+          className="aspect-[4/5] lg:sticky lg:top-28 lg:self-start"
           imgClassName="transition-transform duration-[1400ms] hover:scale-105"
         />
 
