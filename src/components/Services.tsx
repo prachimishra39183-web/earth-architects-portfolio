@@ -24,7 +24,7 @@ export function Services() {
             {services.map((s, i) => (
               <img
                 key={s.title}
-                src={galleryImages[i % galleryImages.length].src}
+                src={galleryImages[i % galleryImages.length]?.src}
                 alt=""
                 aria-hidden="true"
                 loading="lazy"

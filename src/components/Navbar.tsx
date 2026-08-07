@@ -56,7 +56,7 @@ export function Navbar({ overlay = false }: { overlay?: boolean }) {
               <li key={l.label}>
                 <Link
                   to={l.to}
-                  hash={l.hash || undefined}
+                  {...(l.hash ? { hash: l.hash } : {})}
                   className={`link-underline text-[0.72rem] tracking-[0.18em] uppercase transition-colors ${
                     light ? "text-ink-foreground/85 hover:text-ink-foreground" : "text-foreground/70 hover:text-foreground"
                   }`}
@@ -129,7 +129,7 @@ export function Navbar({ overlay = false }: { overlay?: boolean }) {
                 >
                   <Link
                     to={l.to}
-                    hash={l.hash || undefined}
+                    {...(l.hash ? { hash: l.hash } : {})}
                     onClick={() => setOpen(false)}
                     className="font-display block py-3 text-4xl font-light"
                   >
