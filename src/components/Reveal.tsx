@@ -41,20 +41,18 @@ export function RevealImage({
 }) {
   const reduce = useReducedMotion();
   return (
-    <motion.div
-      className={`overflow-hidden ${className ?? ""}`}
-      initial={reduce ? false : { clipPath: "inset(0 0 100% 0)" }}
-      whileInView={{ clipPath: "inset(0 0 0% 0)" }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-    >
-      <img
+    <div className={`overflow-hidden ${className ?? ""}`}>
+      <motion.img
         src={src}
         alt={alt}
         loading={priority ? "eager" : "lazy"}
         decoding="async"
+        initial={reduce ? false : { opacity: 0, scale: 1.08 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, amount: 0.05 }}
+        transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
         className={`h-full w-full object-cover ${imgClassName ?? ""}`}
       />
-    </motion.div>
+    </div>
   );
 }
