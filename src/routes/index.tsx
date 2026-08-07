@@ -1,24 +1,74 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { Intro } from "@/components/Intro";
+import { About } from "@/components/About";
+import { Services } from "@/components/Services";
+import { FeaturedProjects } from "@/components/FeaturedProjects";
+import { Gallery } from "@/components/Gallery";
+import { VideoShowcase } from "@/components/VideoShowcase";
+import { Process } from "@/components/Process";
+import { Achievements } from "@/components/Achievements";
+import { Testimonials } from "@/components/Testimonials";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
+import { CTA } from "@/components/CTA";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Earth Architects | Architecture & Interior Design";
+const description =
+  "Earth Architects creates thoughtful architecture and interior spaces that balance functionality, materiality and timeless design.";
+
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ArchitecturalService",
+          name: "Earth Architects",
+          description,
+          areaServed: "India",
+          url: "/",
+        }),
+      },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Navbar overlay />
+      <main>
+        <h1 className="sr-only">Earth Architects — Architecture and Interior Design Studio</h1>
+        <Hero />
+        <Intro />
+        <About />
+        <Services />
+        <FeaturedProjects />
+        <VideoShowcase />
+        <Gallery />
+        <Process />
+        <Achievements />
+        <Testimonials />
+        <WhyChooseUs />
+        <CTA />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
