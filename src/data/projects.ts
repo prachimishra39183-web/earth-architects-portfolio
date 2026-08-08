@@ -8,6 +8,12 @@ import reception from "@/assets/work/Screenshot_2026-08-07_205956.png.asset.json
 import mandir from "@/assets/work/Screenshot_2026-08-07_210008.png.asset.json";
 import doubleHeight from "@/assets/work/Screenshot_2026-08-07_210013.png.asset.json";
 import triplexVideo from "@/assets/video/triplex-house-walkthrough.mp4.asset.json";
+import heroVideo from "@/assets/video/hero-walkthrough.mp4.asset.json";
+import interiorVideo from "@/assets/video/interior-walkthrough.mp4.asset.json";
+import horseLounge from "@/assets/work/horse-living-room.png.asset.json";
+import atriumLounge from "@/assets/work/atrium-lounge.png.asset.json";
+
+export const heroFilm = heroVideo.url;
 
 export type Project = {
   slug: string;
@@ -120,6 +126,10 @@ export const projects: Project[] = [
       { src: mandir.url, alt: "Carved white marble shrine framed by teak columns" },
       { src: dining.url, alt: "Timber dining table below a glass globe chandelier" },
       { src: living.url, alt: "Formal living room with dark marble feature wall and velvet seating" },
+      {
+        src: horseLounge.url,
+        alt: "Grey modular living room with an equine portrait and patterned armchairs",
+      },
     ],
   },
   {
@@ -149,11 +159,17 @@ export const projects: Project[] = [
       { src: stair.url, alt: "Folded steel staircase above a planted indoor garden" },
       { src: terrace.url, alt: "Upper lounge opening onto a glazed terrace" },
       { src: living.url, alt: "Formal seating area with marble feature wall" },
+      {
+        src: atriumLounge.url,
+        alt: "Double-height lounge around a planted atrium tree with sculptural deer figures",
+      },
     ],
   },
 ];
 
 export const galleryImages = [
+  { src: horseLounge.url, alt: "Grey modular living room with an equine portrait above the sofa" },
+  { src: atriumLounge.url, alt: "Lounge wrapped around a planted indoor atrium tree" },
   { src: doubleHeight.url, alt: "Double-height living room with brass wall discs and green sofas" },
   { src: stair.url, alt: "Folded steel staircase above a planted indoor garden" },
   { src: brick.url, alt: "Brick facade with a tall arched balcony opening" },
@@ -173,6 +189,11 @@ export const showreel: { title: string; caption: string; poster: string; src?: s
     poster: doubleHeight.url,
     src: triplexVideo.url,
   },
-  { title: "Tiny House", caption: "Brick, shadow and the arched threshold", poster: brick.url },
+  {
+    title: "Atrium Residence",
+    caption: "A slow pan across the planted double-height lounge",
+    poster: atriumLounge.url,
+    src: interiorVideo.url,
+  },
   { title: "Bliss IVF Hospital", caption: "Calm circulation, softened light", poster: corridor.url },
 ];

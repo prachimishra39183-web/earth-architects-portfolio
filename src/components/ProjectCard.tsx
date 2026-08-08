@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import type { Project } from "@/data/projects";
+import { Tilt3D } from "./Tilt3D";
 
 export function ProjectCard({
   project,
@@ -26,6 +27,7 @@ export function ProjectCard({
         className="group block"
         aria-label={`View project — ${project.title}`}
       >
+        <Tilt3D>
         <div className={`relative overflow-hidden bg-secondary ${aspect}`}>
           <img
             src={project.cover}
@@ -41,6 +43,7 @@ export function ProjectCard({
             </p>
           </div>
         </div>
+        </Tilt3D>
 
         <div className="mt-5 grid grid-cols-[minmax(0,1fr)_auto] items-start gap-4">
           <div className="min-w-0">
