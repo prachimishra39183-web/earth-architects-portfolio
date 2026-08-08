@@ -45,8 +45,8 @@ export function Testimonials() {
                 </p>
                 <footer className="mt-10">
                   {/* PLACEHOLDER client details — edit in src/data/site.ts */}
-                  <p className="text-sm">— {t.name}</p>
-                  <p className="mt-1 text-[0.7rem] tracking-[0.18em] text-muted-foreground uppercase">
+                  <p className="text-[0.95rem]">— {t.name}</p>
+                  <p className="mt-1 text-[0.72rem] tracking-[0.18em] text-foreground/70 uppercase">
                     {t.project} · {t.role}
                   </p>
                 </footer>
@@ -71,7 +71,7 @@ export function Testimonials() {
             >
               <ArrowRight className="size-4" strokeWidth={1.2} />
             </button>
-            <span className="ml-2 self-center text-[0.7rem] tracking-[0.2em] text-muted-foreground">
+            <span className="ml-2 self-center text-[0.72rem] tracking-[0.2em] text-foreground/70">
               {String(i + 1).padStart(2, "0")} / {String(count).padStart(2, "0")}
             </span>
           </div>
