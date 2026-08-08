@@ -143,6 +143,7 @@ export const projects: Project[] = [
       "Stone-clad walls, folded steel and timber treads, brass wall sculpture, upholstered seating and a soft green and grey interior palette.",
     cover: doubleHeight.url,
     coverAlt: "Double-height living room with stone walls, brass wall discs and green sofas",
+    video: triplexVideo.url,
     gallery: [
       { src: doubleHeight.url, alt: "Double-height living room with brass wall discs" },
       { src: stair.url, alt: "Folded steel staircase above a planted indoor garden" },
@@ -170,6 +171,7 @@ export const showreel: { title: string; caption: string; poster: string; src?: s
     title: "Triplex House",
     caption: "Light moving through the central void",
     poster: doubleHeight.url,
+    src: triplexVideo.url,
   },
   { title: "Tiny House", caption: "Brick, shadow and the arched threshold", poster: brick.url },
   { title: "Bliss IVF Hospital", caption: "Calm circulation, softened light", poster: corridor.url },
