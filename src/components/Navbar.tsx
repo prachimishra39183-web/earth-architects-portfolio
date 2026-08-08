@@ -57,7 +57,7 @@ export function Navbar({ overlay = false }: { overlay?: boolean }) {
                 <Link
                   to={l.to}
                   {...(l.hash ? { hash: l.hash } : {})}
-                  className={`link-underline text-[0.72rem] tracking-[0.18em] uppercase transition-colors ${
+                  className={`link-underline text-[0.78rem] font-medium tracking-[0.16em] uppercase transition-colors ${
                     light ? "text-ink-foreground/85 hover:text-ink-foreground" : "text-foreground/70 hover:text-foreground"
                   }`}
                 >

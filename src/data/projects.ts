@@ -7,6 +7,7 @@ import corridor from "@/assets/work/Screenshot_2026-08-07_205952.png.asset.json"
 import reception from "@/assets/work/Screenshot_2026-08-07_205956.png.asset.json";
 import mandir from "@/assets/work/Screenshot_2026-08-07_210008.png.asset.json";
 import doubleHeight from "@/assets/work/Screenshot_2026-08-07_210013.png.asset.json";
+import triplexVideo from "@/assets/video/triplex-house-walkthrough.mp4.asset.json";
 
 export type Project = {
   slug: string;
