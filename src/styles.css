@@ -56,7 +56,7 @@
   --secondary: oklch(0.94 0.012 82);
   --secondary-foreground: oklch(0.24 0.008 60);
   --muted: oklch(0.94 0.012 82);
-  --muted-foreground: oklch(0.505 0.018 70);
+  --muted-foreground: oklch(0.42 0.02 68);
   --accent: oklch(0.63 0.055 65);
   --accent-foreground: oklch(0.985 0.005 85);
   --destructive: oklch(0.55 0.19 27);
@@ -141,8 +141,9 @@
 
 @utility eyebrow {
   font-family: var(--font-sans);
-  font-size: 0.6875rem;
-  letter-spacing: 0.28em;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--color-muted-foreground);
 }

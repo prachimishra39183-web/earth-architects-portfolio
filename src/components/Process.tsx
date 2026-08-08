@@ -21,7 +21,7 @@ export function Process() {
                 <span className="absolute -left-[3px] top-1 size-[5px] rounded-full bg-bronze lg:top-auto lg:-mt-[3px] lg:left-0" />
                 <p className="text-[0.7rem] tracking-[0.22em] text-bronze">{p.n}</p>
                 <h3 className="font-display mt-3 text-2xl font-light">{p.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
+                <p className="mt-3 text-[0.95rem] leading-relaxed text-foreground/75">{p.text}</p>
               </li>
             </Reveal>
           ))}

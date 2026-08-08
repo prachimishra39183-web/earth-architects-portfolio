@@ -65,25 +65,13 @@ function ProjectDetail() {
       <Navbar overlay />
       <main>
         <section className="relative h-[80svh] min-h-[30rem] overflow-hidden bg-ink">
-          {project.video ? (
-            <video
-              className="h-full w-full object-cover"
-              src={project.video}
-              poster={project.cover}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-            />
-          ) : (
-            <img
-              src={project.cover}
-              alt={project.coverAlt}
-              className="kenburns h-full w-full object-cover"
-              fetchPriority="high"
-            />
-          )}
+          <img
+            src={project.cover}
+            alt={project.coverAlt}
+            className="kenburns h-full w-full object-cover"
+            fetchPriority="high"
+          />
+
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/25" />
           <div className="shell absolute inset-x-0 bottom-0 pb-16 text-ink-foreground">
             <p className="eyebrow text-ink-foreground/70">{project.category}</p>
@@ -130,7 +118,33 @@ function ProjectDetail() {
           </div>
         </section>
 
+        {project.video && (
+          <section className="border-t border-border bg-ink py-20 text-ink-foreground lg:py-28">
+            <div className="shell">
+              <p className="eyebrow text-ink-foreground/70">Project film</p>
+              <h2 className="display-xl mt-6 max-w-2xl text-[clamp(1.8rem,4vw,3rem)]">
+                {project.title} in motion.
+              </h2>
+              <div className="mt-10 overflow-hidden bg-black">
+                <video
+                  className="h-full w-full object-cover"
+                  src={project.video}
+                  poster={project.cover}
+                  controls
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                />
+              </div>
+            </div>
+          </section>
+        )}
+
         <Gallery images={project.gallery} />
+
+
 
         <section className="border-t border-border bg-ink py-20 text-ink-foreground">
           <div className="shell">

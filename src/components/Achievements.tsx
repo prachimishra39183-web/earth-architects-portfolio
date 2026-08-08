@@ -14,7 +14,7 @@ export function Achievements() {
           </h2>
         </Reveal>
         <Reveal delay={0.15}>
-          <p className="mt-6 max-w-xl text-sm leading-relaxed text-muted-foreground">
+          <p className="mt-6 max-w-xl text-[0.95rem] leading-relaxed text-foreground/75">
             Placeholder entries — replace each line in <code>src/data/site.ts</code> with the
             studio's verified awards, exhibitions and published features.
           </p>
@@ -30,8 +30,8 @@ export function Achievements() {
                 <ul className="mt-6 space-y-5">
                   {group.items.map((item, j) => (
                     <li key={j}>
-                      <p className="font-display text-lg leading-snug font-light">{item.label}</p>
-                      <p className="mt-1 text-[0.7rem] tracking-[0.18em] text-muted-foreground uppercase">
+                      <p className="font-display text-xl leading-snug font-normal">{item.label}</p>
+                      <p className="mt-1 text-[0.72rem] tracking-[0.18em] text-foreground/70 uppercase">
                         {item.year}
                       </p>
                     </li>

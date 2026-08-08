@@ -22,7 +22,7 @@ export function WhyChooseUs() {
                   {String(i + 1).padStart(2, "0")}
                 </p>
                 <h3 className="font-display mt-4 text-2xl font-light">{w.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{w.text}</p>
+                <p className="mt-3 text-[0.95rem] leading-relaxed text-foreground/75">{w.text}</p>
               </div>
             </Reveal>
           ))}
