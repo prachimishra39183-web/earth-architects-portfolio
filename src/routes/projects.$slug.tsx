@@ -65,25 +65,13 @@ function ProjectDetail() {
       <Navbar overlay />
       <main>
         <section className="relative h-[80svh] min-h-[30rem] overflow-hidden bg-ink">
-          {project.video ? (
-            <video
-              className="h-full w-full object-cover"
-              src={project.video}
-              poster={project.cover}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-            />
-          ) : (
-            <img
-              src={project.cover}
-              alt={project.coverAlt}
-              className="kenburns h-full w-full object-cover"
-              fetchPriority="high"
-            />
-          )}
+          <img
+            src={project.cover}
+            alt={project.coverAlt}
+            className="kenburns h-full w-full object-cover"
+            fetchPriority="high"
+          />
+
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/25" />
           <div className="shell absolute inset-x-0 bottom-0 pb-16 text-ink-foreground">
             <p className="eyebrow text-ink-foreground/70">{project.category}</p>
