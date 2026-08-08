@@ -45,7 +45,7 @@ export function Navbar({ overlay = false }: { overlay?: boolean }) {
               alt="Earth Architects"
               width={1152}
               height={576}
-              className={`h-11 w-auto shrink-0 transition-all duration-700 lg:h-12 ${
+              className={`h-14 w-auto shrink-0 transition-all duration-700 sm:h-16 lg:h-[4.5rem] ${
                 light ? "brightness-0 invert" : ""
               }`}
             />
@@ -108,7 +108,7 @@ export function Navbar({ overlay = false }: { overlay?: boolean }) {
                 alt="Earth Architects"
                 width={1152}
                 height={576}
-                className="h-11 w-auto brightness-0 invert"
+                className="h-14 w-auto brightness-0 invert"
               />
               <button
                 type="button"
