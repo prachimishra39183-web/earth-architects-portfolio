@@ -1,12 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import heroImg from "@/assets/hero.jpg";
+import { heroFilm } from "@/data/projects";
 
 /**
  * Hero background. Drop an .mp4 URL into HERO_VIDEO to switch from the
  * cinematic still to autoplaying, muted, looping footage.
  */
-const HERO_VIDEO: string | undefined = undefined;
+const HERO_VIDEO: string | undefined = heroFilm;
 
 export function Hero() {
   return (
